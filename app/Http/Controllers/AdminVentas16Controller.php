@@ -5,7 +5,7 @@
 	use DB;
 	use CRUDBooster;
 
-	class AdminVentas15Controller extends \crocodicstudio\crudbooster\controllers\CBController {
+	class AdminVentas16Controller extends \crocodicstudio\crudbooster\controllers\CBController {
 
 	    public function cbInit() {
 
@@ -31,24 +31,22 @@
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
 			$this->col[] = ["label"=>"# de Pieza","name"=>"numdepieza_id","join"=>"almacenes,numdepieza"];
-			$this->col[] = ["label"=>"Cliente","name"=>"cliente","join"=>"almacenes,cliente"];
+			$this->col[] = ["label"=>"Cliente","name"=>"cliente_id","join"=>"clientes,cliente"];
 			$this->col[] = ["label"=>"Precio","name"=>"precio"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
 			$this->form[] = ['label'=>'# de Pieza','name'=>'numdepieza_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'almacenes,numdepieza'];
-			$this->form[] = ['label'=>'Cliente','name'=>'cliente','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'almacenes,cliente'];
-			// $this->form[] = ['label' => 'Precio', 'name' => 'precio', 'type' => 'number', 'validation' => 'required|min:0|max:999999.999', 'width' => 'col-sm-10', 'step' => '0.001'];
+			$this->form[] = ['label'=>'Cliente','name'=>'cliente_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'clientes,cliente'];
 			$this->form[] = ['label' => 'Precio', 'name' => 'precio', 'type' => 'number', 'validation' => 'required|min:1|numeric', 'width' => 'col-sm-10', 'decimals' => '3', 'dec_point' => '.', 'step' => '0.001'];
-
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ['label'=>'# de Pieza','name'=>'numdepieza_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'almacenes,numdepieza'];
-			//$this->form[] = ['label'=>'Cliente','name'=>'cliente','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'almacenes,cliente'];
-			//$this->form[] = ['label'=>'Precio','name'=>'precio','type'=>'money','validation'=>'re','width'=>'col-sm-10','decimals'=>'3','dec_point'=>'.'];
+			//$this->form[] = ["label"=>"Numdepieza Id","name"=>"numdepieza_id","type"=>"select2","required"=>TRUE,"validation"=>"required|min:1|max:255","datatable"=>"numdepieza,id"];
+			//$this->form[] = ["label"=>"Cliente Id","name"=>"cliente_id","type"=>"select2","required"=>TRUE,"validation"=>"required|integer|min:0","datatable"=>"cliente,id"];
+			//$this->form[] = ["label"=>"Precio","name"=>"precio","type"=>"money","required"=>TRUE,"validation"=>"required|integer|min:0"];
 			# OLD END FORM
 
 			/* 
@@ -221,9 +219,6 @@
 	    | @button_name = the name of button
 	    |
 	    */
-
-		
-
 	    public function actionButtonSelected($id_selected,$button_name) {
 	        //Your code here
 	            
