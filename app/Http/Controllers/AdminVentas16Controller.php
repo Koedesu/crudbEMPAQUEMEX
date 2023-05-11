@@ -40,13 +40,14 @@
 			$this->form[] = ['label'=>'# de Pieza','name'=>'numdepieza_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'almacenes,numdepieza'];
 			$this->form[] = ['label'=>'Cliente','name'=>'cliente_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'clientes,cliente'];
 			$this->form[] = ['label' => 'Precio', 'name' => 'precio', 'type' => 'number', 'validation' => 'required|min:1|numeric', 'width' => 'col-sm-10', 'decimals' => '3', 'dec_point' => '.', 'step' => '0.001'];
+			// $this->form[] = ['label' => 'Precio', 'name' => 'precio', 'type' => 'number', 'validation' => 'required|min:1|numeric', 'width' => 'col-sm-10', 'decimals' => '3', 'dec_point' => '.', 'step' => '0.001'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ["label"=>"Numdepieza Id","name"=>"numdepieza_id","type"=>"select2","required"=>TRUE,"validation"=>"required|min:1|max:255","datatable"=>"numdepieza,id"];
-			//$this->form[] = ["label"=>"Cliente Id","name"=>"cliente_id","type"=>"select2","required"=>TRUE,"validation"=>"required|integer|min:0","datatable"=>"cliente,id"];
-			//$this->form[] = ["label"=>"Precio","name"=>"precio","type"=>"money","required"=>TRUE,"validation"=>"required|integer|min:0"];
+			//$this->form[] = ['label'=>'# de Pieza','name'=>'numdepieza_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'almacenes,numdepieza'];
+			//$this->form[] = ['label'=>'Cliente','name'=>'cliente_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'clientes,cliente'];
+			//$this->form[] = ['label' => 'Precio', 'name' => 'precio', 'type' => 'number', 'validation' => 'required|min:1|numeric', 'width' => 'col-sm-10', 'decimals' => '3', 'dec_point' => '.', 'step' => '0.001'];
 			# OLD END FORM
 
 			/* 
